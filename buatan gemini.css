@@ -1,4 +1,4 @@
-/* General Styling */
+/* General Styling */ /* fungsi root ini bagaikan prinsip design yang kita buat diawal */
 :root {
     --primary-color: #007bff; /* Biru cerah */
     --secondary-color: #6c757d; /* Abu-abu gelap */
@@ -22,6 +22,7 @@ body {
     margin: auto;
     padding: 0 20px;
 }
+
 
 h1, h2, h3 {
     color: var(--dark-color);
