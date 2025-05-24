@@ -1,0 +1,50 @@
+jadi untuk css ini yang dibuatkan oleh gemini
+pertama dia memakai 
+:root
+untuk menentukan nilai nilai var yang digunakan supaya senada
+kedua dia style bodynya 
+body {}
+ketiga dia set container untuk head nya
+keempat dia set h1,h2,h3
+kelima dia set link dan button ,kayak gini
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3; /* Sedikit lebih gelap dari primary-color */
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.button-small {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    padding: 8px 15px;
+    border-radius: 3px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.button-small:hover {
+    background-color: #5a6268;
+}
+
+keenam dia set posisi headernya 
+margin padding font dlll
+footer dll dll 
