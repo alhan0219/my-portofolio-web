@@ -22,5 +22,9 @@ body{
     height: 100%;
     /* clear: both; */
 }
-.text
+.text{
+    top: 100%;
+    background-color: yellow;
+    display: flex;
+}
 }
