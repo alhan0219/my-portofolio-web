@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Anda</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8; /* Light background */
+            color: #333;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+        /* Custom scrollbar for aesthetic */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #a8a8a8;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #888;
+        }
+
+        /* Animation classes */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .scale-in.is-visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Typing effect specific styles */
+        .typing-text {
+            overflow: hidden; /* Ensures the text is hidden until typed */
+            white-space: nowrap; /* Keeps the content on a single line */
+            border-right: .15em solid #6366f1; /* The blinking cursor */
+            animation: typing 3s steps(40, end) forwards, blink-caret .75s step-end infinite;
+        }
+
+        /* Typing animation */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        /* Blinking cursor animation */
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #6366f1; }
+        }
+    </style>
+</head>
+<body class="scroll-smooth">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-sm py-4 px-6 md:px-12 fixed top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-bold text-gray-800 hover:text-indigo-600 transition-colors duration-300 rounded-lg p-2">
+                [Nama Anda]
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300 font-medium rounded-lg p-2">Tentang</a>
+                <a href="#portfolio" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300 font-medium rounded-lg p-2">Portofolio</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300 font-medium rounded-lg p-2">Kontak</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-indigo-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-gray-800 bg-opacity-90 z-40 flex flex-col items-center justify-center space-y-8">
+            <button id="close-mobile-menu" class="absolute top-6 right-6 text-white hover:text-gray-300 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <a href="#about" class="text-white text-3xl font-medium hover:text-indigo-300 transition-colors duration-300" onclick="closeMobileMenu()">Tentang</a>
+            <a href="#portfolio" class="text-white text-3xl font-medium hover:text-indigo-300 transition-colors duration-300" onclick="closeMobileMenu()">Portofolio</a>
+            <a href="#contact" class="text-white text-3xl font-medium hover:text-indigo-300 transition-colors duration-300" onclick="closeMobileMenu()">Kontak</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative flex items-center justify-center min-h-screen bg-gradient-to-br from-indigo-500 to-purple-600 text-white text-center pt-20">
+        <div class="container mx-auto px-6 py-12">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 typing-text">
+                Halo, saya [Nama Anda].
+            </h1>
+            <p class="text-lg md:text-xl mb-8 opacity-0 fade-in-up" style="animation-delay: 3.5s;">
+                Seorang [Desainer/Pengembang/Seniman] yang bersemangat menciptakan solusi inovatif.
+            </p>
+            <a href="#portfolio" class="inline-block bg-white text-indigo-600 hover:bg-indigo-100 transition-all duration-300 py-3 px-8 rounded-full shadow-lg font-semibold text-lg opacity-0 fade-in-up" style="animation-delay: 4s;">
+                Lihat Karya Saya
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12 fade-in-up">Tentang Saya</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+                <div class="w-full md:w-1/3 flex justify-center fade-in-up">
+                    <img src="https://placehold.co/300x300/e0e0e0/888888?text=Foto+Profil" alt="Foto Profil Anda" class="rounded-full shadow-lg border-4 border-indigo-200 object-cover w-64 h-64 md:w-72 md:h-72">
+                </div>
+                <div class="w-full md:w-2/3 text-center md:text-left fade-in-up">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        Saya adalah seorang [profesi Anda, misal: Desainer UI/UX] dengan pengalaman [jumlah] tahun dalam menciptakan pengalaman digital yang intuitif dan menarik. Saya percaya bahwa desain yang baik tidak hanya indah, tetapi juga berfungsi dengan baik dan memecahkan masalah nyata.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Saya memiliki keahlian dalam [sebutkan keahlian, misal: Figma, Adobe XD, HTML, CSS, JavaScript, React]. Saya selalu antusias untuk belajar hal baru dan menghadapi tantangan kreatif. Mari berkolaborasi!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12 fade-in-up">Karya Pilihan</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 fade-in-up">
+                    <img src="https://placehold.co/600x400/d1d5db/4b5563?text=Proyek+1" alt="Proyek Portofolio 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Nama Proyek 1</h3>
+                        <p class="text-gray-600 text-sm mb-4">Kategori: [Desain Web/Aplikasi Mobile/Ilustrasi]</p>
+                        <p class="text-gray-700 text-base">
+                            Deskripsi singkat tentang proyek ini. Jelaskan peran Anda dan hasil yang dicapai.
+                        </p>
+                        <a href="#" class="mt-4 inline-block text-indigo-600 hover:text-indigo-800 font-medium transition-colors duration-300">
+                            Lihat Detail &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 fade-in-up" style="animation-delay: 0.2s;">
+                    <img src="https://placehold.co/600x400/d1d5db/4b5563?text=Proyek+2" alt="Proyek Portofolio 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Nama Proyek 2</h3>
+                        <p class="text-gray-600 text-sm mb-4">Kategori: [Desain Web/Aplikasi Mobile/Ilustrasi]</p>
+                        <p class="text-gray-700 text-base">
+                            Deskripsi singkat tentang proyek ini. Jelaskan peran Anda dan hasil yang dicapai.
+                        </p>
+                        <a href="#" class="mt-4 inline-block text-indigo-600 hover:text-indigo-800 font-medium transition-colors duration-300">
+                            Lihat Detail &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 fade-in-up" style="animation-delay: 0.4s;">
+                    <img src="https://placehold.co/600x400/d1d5db/4b5563?text=Proyek+3" alt="Proyek Portofolio 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Nama Proyek 3</h3>
+                        <p class="text-gray-600 text-sm mb-4">Kategori: [Desain Web/Aplikasi Mobile/Ilustrasi]</p>
+                        <p class="text-gray-700 text-base">
+                            Deskripsi singkat tentang proyek ini. Jelaskan peran Anda dan hasil yang dicapai.
+                        </p>
+                        <a href="#" class="mt-4 inline-block text-indigo-600 hover:text-indigo-800 font-medium transition-colors duration-300">
+                            Lihat Detail &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12 fade-in-up">Hubungi Saya</h2>
+            <div class="max-w-xl mx-auto bg-gray-50 p-8 rounded-xl shadow-lg fade-in-up">
+                <p class="text-lg text-gray-700 text-center mb-6">
+                    Tertarik untuk berkolaborasi atau sekadar menyapa? Jangan ragu untuk menghubungi saya!
+                </p>
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-gray-700 text-sm font-semibold mb-2">Nama Lengkap</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200" placeholder="Nama Anda">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">Alamat Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200" placeholder="email@example.com">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-700 text-sm font-semibold mb-2">Pesan Anda</label>
+                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200" placeholder="Tulis pesan Anda di sini..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-indigo-700 transition-colors duration-300 shadow-md">
+                        Kirim Pesan
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 text-center">
+        <div class="container mx-auto px-6">
+            <p class="text-sm">&copy; 2025 [Nama Anda]. Hak Cipta Dilindungi Undang-Undang.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <!-- Placeholder for social media icon (e.g., LinkedIn) -->
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <!-- Placeholder for social media icon (e.g., GitHub) -->
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.372 0 0 5.372 0 12c0 5.303 3.438 9.799 8.205 11.385.6.11.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.043-1.609-4.043-1.609-.546-1.387-1.334-1.756-1.334-1.756-1.09-.745.082-.73.082-.73 1.205.085 1.838 1.238 1.838 1.238 1.07 1.835 2.809 1.305 3.49.997.108-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.383 1.235-3.22-.12-.3-.535-1.52.117-3.176 0 0 1-.322 3.303 1.23.96-.267 1.98-.4 3-.407 1.02.007 2.04.14 3 .407 2.302-1.552 3.302-1.23 3.302-1.23.653 1.656.24 2.876.12 3.176.77.837 1.235 1.91 1.235 3.22 0 4.61-2.804 5.624-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.89-.015 3.286 0 .32.21.69.825.575C20.565 21.801 24 17.309 24 12c0-6.628-5.372-12-12-12z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        function closeMobileMenu() {
+            mobileMenu.classList.add('hidden');
+        }
+
+        // Intersection Observer for scroll-triggered animations
+        const elementsToAnimate = document.querySelectorAll('.fade-in-up, .scale-in');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // Stop observing once animated to prevent re-triggering
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1, // Trigger when 10% of the element is visible
+            rootMargin: '0px 0px -50px 0px' // Adjust margin to trigger slightly earlier
+        });
+
+        elementsToAnimate.forEach(element => {
+            observer.observe(element);
+        });
+
+        // Manually trigger fade-in for hero section elements after typing effect
+        document.addEventListener('DOMContentLoaded', () => {
+            const heroParagraph = document.querySelector('#hero p');
+            const heroButton = document.querySelector('#hero a');
+
+            // Set a timeout to match the typing animation duration
+            setTimeout(() => {
+                heroParagraph.classList.add('is-visible');
+                heroButton.classList.add('is-visible');
+            }, 3500); // 3.5 seconds to match typing animation + slight delay
+        });
+
+    </script>
+</body>
+</html>
