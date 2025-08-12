@@ -233,7 +233,7 @@ table {
     /* filter: grayscale(100%); */
     border: 3px solid rgb(15, 183, 18);
 }
-#kotak {
+#bola {
     width: 10%;
     height: 10%;
     z-index: 501;
@@ -297,26 +297,31 @@ table {
 
     }
 }
-#human {
+/* #human img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+} */
+ #human1 {
     position: absolute;
-    width: 30%;
-    height: 40%;
-    left: -2%;
+    width: 35%;
+    height: auto;
+    top: 65%;
+    right:70%;
     z-index: 540;
-    top: 60%;
-    opacity: 0.7;
-}
+ }
+
+
+
 /* artinya dibawah 400px aturan ini terpakai */
 @media screen and (max-width:400px){
-    #kotak img {
+    #bola{
         width: 50%;
         height: 20%;
 
     }
-    .kotak {
-        width: 50%;
-        height: 20%;
-        border-radius: 10%;
+
     }
     #human {
         width: 60%;
@@ -324,17 +329,10 @@ table {
         left: -2%;
 
     }   
-}
 @media screen and (max-width:1700px){
-    #kotak img {
-        width: 50%;
-        height: 20%;
-
-    }
-    .kotak {
-        width: 50%;
-        height: 20%;
-        border-radius: 10%;
+    #bola{
+        width: 10%;
+        height: auto;
     }
     #human {
         width: 40%;
