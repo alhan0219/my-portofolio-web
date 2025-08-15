@@ -16,7 +16,7 @@
         <ul >
             <li ><a href="#bola"> Contact Me</a></li>
             <li ><a href="#container-bawah"> My Project</a></li>
-            <li ><a href="#"> About Me</a></li>
+            <li ><a href="#bola"> About Me</a></li>
         </ul>
     <div class="name1"><h1>MY</h1></div>
     <div class="name2"><h1>P<br>O<br>R<br>T<br>O<br>F<br>O<br>L<br>I<br>O </h1></div>
@@ -29,11 +29,88 @@
         <div class="item"><a href="#"><img src="image/sapi.jpeg"  style="height: 200px; width:200px;"></a></div>
         <div class="item"><a href="#"><img src="image/sapi2.jpeg" style="height: 200px; width:200px;"></a></div>
         <div class="item"><a href="#"><img src="image/sapi3.jpeg" style="height: 200px; width:200px;"></a></div>
-        <div class="item"><a href="#"><img src="image/sapi3.jpeg" style="height: 200px; width:300px;"></a></div>
+        <div class="item"><a href="#"><img src="image/sapi3.jpeg" style="height: 200px; width:200px;"></a></div>
     </div>
     <div ><img src="image/741 [Converted].png" id="bola" alt="sapi"></div>
     <div class="kotak2"></div>
     <div><img src="image/5574665.png"id="human1" alt="sapi"></div>
+    <!-- <div class="kosong">fgrtgrtgrtgrt</div> -->
+<!-- <div class="jam-digital">
+	<div class="kotak">
+		<p id="jam">:</p>
+	</div>
+	<div class="kotak">
+		<p id="menit">:</p>
+	</div>
+	<div class="kotak">
+		<p id="detik">:</p>
+	</div> -->
+<div class="jam-container">
+        <div id="jam-digital"></div>
+    </div>
+</div>
+<script>
+    // Memulai perulangan untuk menjalankan fungsi setiap 1 detik
+// setInterval("jam-digital"() {
+//     var waktu = new Date();
+//     var jam = waktu.getHours();
+//     var menit = waktu.getMinutes();
+//     var detik = waktu.getSeconds();
+
+//     // Pastikan angka selalu memiliki dua digit (misalnya, 08, 09)
+//     if (jam < 10) {
+//         jam = "0" + jam;
+//     }
+//     if (menit < 10) {
+//         menit = "0" + menit;
+//     }
+//     if (detik < 10) {
+//         detik = "0" + detik;
+//     }
+
+//     // Menggabungkan dan menampilkan waktu ke dalam elemen dengan ID "waktu"
+//     document.getElementById("waktu").innerHTML = jam + ":" + menit + ":" + detik;
+
+// }, 1000);
+
+
+	// window.setTimeout("waktu()", 1000);
+ 
+	// function waktu() {
+	// 	var waktu = new Date();
+	// 	setTimeout("waktu()", 1000);
+	// 	document.getElementById("jam").innerHTML = waktu.getHours();
+	// 	document.getElementById("menit").innerHTML = waktu.getMinutes();
+	// 	document.getElementById("detik").innerHTML = waktu.getSeconds();
+    //     document.getElementById("waktu").innerHTML = jam + ":" + menit + ":" + detik;
+        
+	// }
+
+    // Fungsi untuk menampilkan jam
+function tampilkanJam() {
+    var waktu = new Date();
+    var jam = waktu.getHours();
+    var menit = waktu.getMinutes();
+    var detik = waktu.getSeconds();
+
+    // Tambahkan "0" di depan jika angka kurang dari 10
+    // Contoh: 8 menjadi 08
+    jam = (jam < 10) ? "0" + jam : jam;
+    menit = (menit < 10) ? "0" + menit : menit;
+    detik = (detik < 10) ? "0" + detik : detik;
+
+    // Gabungkan waktu menjadi format "hh:mm:ss"
+    var formatWaktu = jam + ":" + menit + ":" + detik;
+
+    // Tampilkan waktu ke dalam elemen HTML dengan ID "jam-digital"
+    document.getElementById("jam-digital").innerHTML = formatWaktu;
+}
+
+// Panggil fungsi tampilkanJam setiap 1 detik (1000 milidetik)
+// Ini akan memperbarui jam secara real-time
+setInterval(tampilkanJam, 1000);
+</script>
+
 
 
    

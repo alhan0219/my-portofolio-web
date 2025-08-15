@@ -109,8 +109,8 @@ table {
     gap: 30px;
 }
 .name3 a{
-    color:white;
-    background-color: rgb(37, 34, 34);
+    color:rgb(2, 2, 2);
+    background-color: rgb(255, 255, 255);
     text-decoration:none;
     font-size: 150%;
     font-weight: bold;
@@ -215,7 +215,8 @@ table {
     position: absolute;
     /* height: 30%; */
     width:60%;
-    /* background-color: blue; */
+    /* background-color: rgb(15, 183, 18); */
+    border-radius: 10%;
     display: flex;
     flex-wrap: wrap;
     /* flex-direction: row; */
@@ -228,10 +229,12 @@ table {
     padding: 15px;
     box-sizing: border-box;
 }
-.item {
+.item img{
     margin: 2px;
     /* filter: grayscale(100%); */
     border: 3px solid rgb(15, 183, 18);
+    border-radius: 30%;
+    /* object-fit: cover; */
 }
 #bola {
     width: 10%;
@@ -245,12 +248,7 @@ table {
     animation-iteration-count: infinite;
     border-radius: 50%;
 }
-/* #kotak img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px rgb(15, 183, 18);
-} */
+
 @keyframes test {
     0%{
         top: 75%;
@@ -297,12 +295,6 @@ table {
 
     }
 }
-/* #human img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
-} */
  #human1 {
     position: absolute;
     width: 35%;
@@ -311,9 +303,60 @@ table {
     right:70%;
     z-index: 540;
  }
+/* .jam-digital {
+        position: absolute;
+        z-index: 3000;
+        left: 0;
+        top: 0;
+        display: flex;
+		overflow: hidden;
+		width: 330px;
+		/* margin: 20px auto; */
+} */
+/* .kotak{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+	width: 15%;
+	height: 10%;
+	background-color: rgb(109, 99, 99);
+    opacity: .7;
+} */
+/* .jam-digital p {
+		color: rgb(33, 216, 106);
+		font-size: 30px;
+		text-align: center;
+		/* margin-top: 30px; */
+}*/
 
 
+.jam-container {
+    z-index: 9999;
+    position: absolute;
+    display: flex;
+}
 
+#jam-digital {
+    position: fixed;
+    /* background-color: rgb(255, 255, 255); */
+    border-radius: 1%;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    z-index: 99999;
+    left: 5%;
+    top: .5%;
+    /* width: 5%; */
+    opacity: .7;
+    /* letter-spacing: 5px; */
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
+}
+ 
 /* artinya dibawah 400px aturan ini terpakai */
 @media screen and (max-width:400px){
     #bola{
@@ -324,7 +367,7 @@ table {
 
     }
     #human {
-        width: 60%;
+        width: 50%;
         height: 10%;
         left: -2%;
 
@@ -335,28 +378,9 @@ table {
         height: auto;
     }
     #human {
-        width: 40%;
+        width: 30%;
         height: 20%;
         left: -2%;
 
-    }   
-}
-/* @media screen and (max-width:400px){
-    #kotak img {
-        width: 50%;
-        height: 20%;
-
-    }
-    .kotak {
-        width: 50%;
-        height: 20%;
-        border-radius: 10%;
-    }
-    #human {
-        width: 60%;
-        height: 10%;
-        left: -2%;
-
-    }   
-} */
-
+    }  
+ }
