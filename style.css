@@ -369,7 +369,7 @@ table {
 }*/
 
 
-.jam-container {
+/* .jam-container {
     z-index: 9999;
     position: absolute;
     display: flex;
@@ -394,7 +394,7 @@ table {
     height: auto;
     /* letter-spacing: 5px; */
     /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
-}
+} */
  
 /* artinya dibawah 400px aturan ini terpakai */
 @media screen and (max-width:450px){
