@@ -373,7 +373,6 @@ table {
     z-index: 9999;
     position: absolute;
     display: flex;
-    width: 15%;
 }
 
 #jam-digital {
@@ -388,9 +387,9 @@ table {
     justify-content: center;
     display: flex;
     z-index: 99999;
-    left: 10%;
-    top: 4%;
-    width: 5%;
+    left: 5%;
+    top: .5%;
+    /* width: 5%; */
     opacity: .7;
     height: auto;
     /* letter-spacing: 5px; */
@@ -404,14 +403,19 @@ table {
         height: 20%;
 
     }
-
-    }
     #human {
         width: 50%;
         height: 10%;
         left: -2%;
 
-    }   
+    }
+    #jam-digital {
+        width: 50%;
+        height: 20%;
+        left: 5%;
+        top: 11%;
+    }
+
 @media screen and (max-width:1700px){
     #bola{
         width: 10%;
