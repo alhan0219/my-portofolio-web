@@ -397,7 +397,7 @@ table {
 }
  
 /* artinya dibawah 400px aturan ini terpakai */
-@media screen and (max-width:400px){
+@media screen and (max-width:450px){
     #bola{
         width: 50%;
         height: 20%;
