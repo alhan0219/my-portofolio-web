@@ -388,8 +388,8 @@ table {
     justify-content: center;
     display: flex;
     z-index: 99999;
-    left: 5%;
-    top: .5%;
+    left: 10%;
+    top: 2.5%;
     width: 5%;
     opacity: .7;
     height: auto;
