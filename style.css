@@ -373,6 +373,7 @@ table {
     z-index: 9999;
     position: absolute;
     display: flex;
+    width: 15%;
 }
 
 #jam-digital {
