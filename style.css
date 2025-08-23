@@ -70,22 +70,14 @@ table {
 
 }
 
-.tembelan{
-    position: absolute;
-    top:1100px;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: rgb(0, 0, 0);
-    z-index:-1;
-    height: 900px;
-}
+
 .head1{
     position: relative;
     top: 0;
     left: 0;
     right: 0;
-    height: 1200px;
+    bottom: 0;
+    height: 130vh;
     background-color:black;
     z-index: 0;
     display: flex;
@@ -98,7 +90,7 @@ table {
     bottom: 0;
     position: absolute;
     /* background-image: url(image/hitam.png); */
-    background-size: 2000px 1200px; /* Lebar 200px, Tinggi 150px */
+    /* background-size: 2000px 1200px; Lebar 200px, Tinggi 150px */
     background-repeat:repeat;
     /* filter:grayscale(); */
     z-index: -1;
@@ -110,10 +102,10 @@ table {
     position: absolute;
     display: flex;
     flex-direction: column;
-    top:70%;
+    top: 105vh;
     /* background-color: aqua; */
-    width: 20%;
-    right:5%;
+    width: 20vw;
+    right:8vw;
     align-items: center;
     justify-content: center;
     /* margin: 10px; */
@@ -143,9 +135,9 @@ table {
     font-family: "Hanalei", system-ui;
     font-weight: 500;
     font-style: normal;
-    width: 20%;
-    height: 10%;
-    top: 3%;
+    width: 20vw;
+    /* height: 10%; */
+    top: 10vh;
     position: absolute;
     right:5%;
     font-size: 410%;
@@ -156,7 +148,7 @@ table {
     margin: 0;
     padding: 0;
     display: flex;
-    color: rgb(33, 216, 106);
+    color: rgb(255, 255, 255);
     /* background-color: aqua; */
     justify-content: center;
     align-items: center;
@@ -166,9 +158,9 @@ table {
     /* border: 5px solid rgb(215, 195, 195); */
     box-sizing: border-box;
     width: 20%;
-    height: 40%;
+    /* height: 40%; */
     position:absolute;
-    top: 20%;
+    top: 20vh;
     right:5%;
     font-size: 410%;
 
@@ -184,8 +176,8 @@ table {
     left: 0;
     right: 0;
     background-color:  rgb(109, 99, 99);
-    height: 30px;
-    padding: 5px;
+    height: 60%;
+    padding: 1vw;
     box-sizing: border-box;
     display: flex;
     margin-right: 10px;
@@ -199,12 +191,12 @@ table {
     background-color: rgb(61, 61, 61);
     right: 0;
     left: 0;
-    height: 50px;
+    height: 5vh;
     align-items: center;
     display: flex;
     justify-content: center;
     z-index: 888;
-    flex-direction: row;
+    /* flex-direction: row; */
 }
 
 #text{
@@ -212,20 +204,21 @@ table {
     display: flex;
     position: absolute;
     /* max-height: 400px; */
-    width:60%;
-    height: 15%;
+    width:55vw;
+    /* height: 100%; */
     text-align:center;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    top: 5%;
+    top: 10vh;
     left: 10%;
     right: 29%;
-    overflow-y: auto;
+    /* overflow-y: auto; */
 }
+
 #container-bawah{
     position: relative;
-    /* height: 50%; */
-    width:60%;
+    height: 50vh;
+    width:60vw;
     /* background-color: rgb(15, 183, 18); */
     border-radius: 1%;
     display: flex;
@@ -233,9 +226,10 @@ table {
     /* flex-direction: row; */
     justify-content: space-around;
     /* justify-items: center; */
-    left: 10%;
-    right: 29%;
-    top: 20%;
+    left: 5vw;
+    right: 5vw;
+    top: 45vh;
+    gap: 5vw;
     z-index: 500;
     padding: 15px;
     box-sizing: border-box;
@@ -246,9 +240,9 @@ table {
     position: relative;
     /* flex-wrap: wrap; */
     /* justify-content: space-around; */
-    margin: 2px;
-    width: 100%;
-    height: 100%;
+    /* padding: 1vw; */
+    width: 30vw;
+    height: auto;
     /* filter: grayscale(100%); */
     /* border: 3px solid rgb(15, 183, 18); */
     border-radius: 10%;
@@ -256,10 +250,10 @@ table {
     /* object-fit: cover; */
 }
 .item{
-    width: 40%;
-    height: 40%;
+    width: 20vw;
+    height: auto;
     display: flex;
-    padding: 1%;
+    /* padding: 1.5vw; */
     /* flex-direction: row; */
 }
 .item a {
@@ -268,12 +262,12 @@ table {
     color: rgb(33, 216, 106);
 }
 #bola {
-    width: 10%;
-    height: 15%;
+    width: 20vw;
+    height: auto;
     z-index: 501;
     position:absolute;
-    top: 70%;
-    right:12%;
+    top: 108vh;
+    right:5vw;
     animation-name: test;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -314,7 +308,7 @@ table {
     z-index: 2;
     background-color: rgb(30, 24, 24);
     position:absolute;
-    top: 70%;
+    top: 80%;
     right:12%;
     border-radius: 50%;
     animation-duration: 3s;
@@ -328,7 +322,7 @@ table {
          top: 90%;
          right:12%;
     }
-    to{ top: 70%;
+    to{ top: 80%;
         right: 12%;
 
     }
@@ -387,56 +381,74 @@ table {
     justify-content: center;
     display: flex;
     z-index: 99999;
-    left: 5%;
-    top: .5%;
-    /* width: 5%; */
+    left: 2vw;
+    top: 6vh;
+    width: 20vw;
     opacity: .7;
     height: auto;
     /* letter-spacing: 5px; */
     /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
 }
+
+/* artinya dibawah 400px aturan ini terpakai untuk aturan media query ini urutan css nya mulai yang paling tinggi agar tidak ketumpuk dan jalan semua , kalau ngedesain dari 360px dulu alias versi mobile*/
+/* 700px height 1400px*/
+/* @media screen and (max-width:700px){
+    #bola{width: 19%; height: 7%; top: 50%; left: 65%;}
+    .kotak2{}
+    #jam-digital{top: 1.5%;}
+    .name3{top: 50%; left: 70%;}
+    #container-bawah{width: 60%; top: 20%; height: 15%;}
+    #container-bawah a{width: 100%; }
+    #container-bawah img {width: 100%; height: 50%;}
+    #container-bawah .item{height: 100%;}
+    #text{top: 5%;}
+    .head1 ul{width: 100%; height: 5%;}
+    .name1{}
+    .name2{top: 10%;}
+} */
  
-/* artinya dibawah 400px aturan ini terpakai */
-@media screen and (max-width:450px){
-    #bola{
-        width: 50%;
-        height: 20%;
-
-    }
-    #human {
-        width: 50%;
-        height: 10%;
-        left: -2%;
-
-    }
-    #jam-digital {
-        width: 50%;
-        height: 20%;
-        left: 5%;
-        top: 32%;
-    }
-
-@media screen and (max-width:1700px){
-    #bola{
-        width: 10%;
-        height: auto;
-    }
-    #human {
-        width: 30%;
-        height: 20%;
-        left: -2%;
-
-    }  
- }
- @media screen and (max-width:1200px){
-    .item a img{
-        width: 90%;
-        height: 60%;
-    }
-   #container-bawah {
-        width: 60%;
-        height: 60%;
-    }
+/* s20 android height 800*/
+/* @media screen and (max-width:360px){
+    #bola{width: 30%; height: 10%; top: 75%; left: 65%;}
+    .kotak2{}
+    #jam-digital{top: 4%;}
+    .name3{top: 80%; left: 70%;}
+    #container-bawah{width: 60%; top: 35%; height: 15%;}
+    #container-bawah a{width: 100%; }
+    #container-bawah img {width: 100%; height: 50%;}
+    #container-bawah .item{height: 100%;}
+    #text{top: 5%;}
+    .head1 ul{width: 100vw; height: 5%;}
+    .name1{}
+    .name2{top: 12%; }
+} */
+/* s20 android height 800*/
+/* @media screen and (max-width:360px){
+    #bola{width: 30%; height: 10%; top: 75%; left: 65%;}
+    .kotak2{}
+    #jam-digital{top: 4%;}
+    .name3{top: 80%; left: 70%;}
+    #container-bawah{width: 60%; top: 35%; height: 15%;}
+    #container-bawah a{width: 100%; }
+    #container-bawah img {width: 100%; height: 50%;}
+    #container-bawah .item{height: 100%;}
+    #text{top: 5%;}
+    .head1 ul{width: 100%; height: 5%;}
+    .name1{}
+    .name2{top: 12%;}
+} */
 
 
- }
+
+/* Mobile styles (default) contoh media query terbaik dari mobile ke dekstop next begini kalau mau bikin ya*/
+/* .container { width: 100%; } */
+
+/* Tablet */
+/* @media (min-width: 768px) {
+  .container { width: 750px; }
+} */
+
+/* Desktop */
+/* @media (min-width: 1024px) {
+  .container { width: 970px; }
+} */
