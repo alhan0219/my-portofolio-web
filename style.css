@@ -102,7 +102,7 @@ table {
     position: absolute;
     display: flex;
     flex-direction: column;
-    top: 105vh;
+    top: 110vh;
     /* background-color: aqua; */
     width: 20vw;
     right:8vw;
@@ -368,6 +368,9 @@ table {
     z-index: 9999;
     position: absolute;
     display: flex;
+    left: 2vw;
+    top: 6vh;
+    width: 20vw;
 }
 
 #jam-digital {
