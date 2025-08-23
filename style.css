@@ -369,7 +369,7 @@ table {
 }
 
 #jam-digital {
-    position: absolute;
+    position: fixed;
     /* background-color: rgb(255, 255, 255); */
     border-radius: 1%;
     box-sizing: border-box;
