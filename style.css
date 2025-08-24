@@ -266,7 +266,7 @@ table {
     width: 20vw;
     height: auto;
     z-index: 501;
-    position:absolute;
+    position:relative;
     top: 108vh;
     right:5vw;
     animation-name: test;
