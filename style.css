@@ -217,7 +217,7 @@ table {
 }
 #container-bawah{
     position: relative;
-    height: 50vh;
+    /* height: 50vh; */
     width:60vw;
     max-height: 40vh;
     /* background-color: rgb(15, 183, 18); */
@@ -397,15 +397,17 @@ table {
 /* artinya dibawah 400px aturan ini terpakai untuk aturan media query ini urutan css nya mulai yang paling tinggi agar tidak ketumpuk dan jalan semua , kalau ngedesain dari 300px dulu alias versi mobile*/
 /* 700px height 1400px*/
 @media screen and (min-width:800px){
-    #bola{}
+    #bola{width: 8vw; right: 8vw; top: 105;}
     .kotak2{}
-    #jam-digital{
+    #jam-digital{}
     .name3{}
-    #container-bawah{}
-    #container-bawah a{}
-    #container-bawah img {}
-    #container-bawah .item{}
-    #text{}
+
+    #container-bawah{height: 85vh; top: 30vh; }
+    #container-bawah .item{ width: 30%; position: relative;}
+    #container-bawah a{position: relative;}
+    #container-bawah img {position: relative; width: 100%;}
+    #text{height: 20vh;}
+
     .head1 ul{}
     .name1{}
     .name2{}
