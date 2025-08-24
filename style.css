@@ -255,7 +255,7 @@ table {
     height: auto;
     display: flex;
     /* padding: 1.5vw; */
-    /* flex-direction: row; */
+    /* flex-direction: column; */
 }
 .item a {
     text-align: CENTER;
