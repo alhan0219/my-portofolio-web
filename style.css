@@ -394,7 +394,7 @@ table {
     /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
 }
 
-/* artinya dibawah 400px aturan ini terpakai untuk aturan media query ini urutan css nya mulai yang paling tinggi agar tidak ketumpuk dan jalan semua , kalau ngedesain dari 300px dulu alias versi mobile*/
+/* artinya dibawah 400px  atau max width 400px , kebalikannya min itu diatasnya aturan ini terpakai untuk aturan media query ini urutan css nya mulai yang paling tinggi agar tidak ketumpuk dan jalan semua , kalau ngedesain dari 300px dulu alias versi mobile*/
 /* 700px height 1400px*/
 @media screen and (min-width:800px){
     #bola{width: 8vw; right: 8vw; top: 105;}
